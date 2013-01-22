@@ -127,7 +127,7 @@ steal(
 
             var ret = new $.Model.List(list);
             if (ret.length) {
-                $([this]).trigger("remove", [ret])
+                this._triggerChange(""+index, "remove", undefined, ret);
             }
 
             return ret;
@@ -144,7 +144,7 @@ steal(
 
             var ret = new $.Model.List(list);
             if (ret.length) {
-                $([this]).trigger("remove", [ret])
+                this._triggerChange(""+index, "remove", undefined, ret);
             }
 
             return ret;
